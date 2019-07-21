@@ -1,0 +1,51 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "contenu": {
+      "type": "text"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_keywords": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "text"
+    },
+    "categories": {
+      "collection": "categorie",
+      "via": "articles"
+    },
+    "resume": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "pages",
+  "info": {
+    "name": "page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "titre": {
+      "required": true,
+      "type": "string"
+    },
+    "slug": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "contenu": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "seo_keywords": {
+      "type": "string"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "text"
+    },
+    "visible": {
+      "type": "boolean"
+    }
+  }
+}

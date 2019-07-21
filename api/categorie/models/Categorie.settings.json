@@ -1,0 +1,54 @@
+{
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "categorie",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "seo_keywords": {
+      "type": "string"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "text"
+    },
+    "articles": {
+      "collection": "article",
+      "dominant": true,
+      "via": "categories"
+    },
+    "contenu": {
+      "type": "text"
+    },
+    "categories": {
+      "collection": "categorie",
+      "via": "category"
+    },
+    "category": {
+      "model": "categorie",
+      "via": "categories"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
