@@ -2,50 +2,36 @@
   "name": "api",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application.",
-  "main": "./server.js",
+  "description": "A Strapi application",
   "scripts": {
-    "setup": "cd admin && npm run setup",
-    "start": "node server.js",
-    "strapi": "node_modules/strapi/bin/strapi.js",
-    "lint": "node_modules/.bin/eslint api/**/*.js config/**/*.js plugins/**/*.js",
-    "postinstall": "node node_modules/strapi/lib/utils/post-install.js"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
-  "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-react": "^7.7.0"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "lodash": "^4.17.5",
-    "strapi": "3.0.0-alpha.26.2",
-    "strapi-utils": "3.0.0-alpha.26.2",
-    "strapi-hook-bookshelf": "3.0.0-alpha.26.2",
-    "strapi-hook-knex": "3.0.0-alpha.26.2",
-    "knex": "latest",
+    "strapi": "3.0.0-beta.18.6",
+    "strapi-admin": "3.0.0-beta.18.6",
+    "strapi-utils": "3.0.0-beta.18.6",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.18.6",
+    "strapi-plugin-content-manager": "3.0.0-beta.18.6",
+    "strapi-plugin-users-permissions": "3.0.0-beta.18.6",
+    "strapi-plugin-email": "3.0.0-beta.18.6",
+    "strapi-plugin-upload": "3.0.0-beta.18.6",
+    "strapi-connector-bookshelf": "3.0.0-beta.18.6",
+    "knex": "<0.20.0",
     "sqlite3": "latest"
   },
   "author": {
-    "name": "juliengabryelewicz",
-    "email": "",
-    "url": ""
+    "name": "A Strapi developer"
   },
-  "maintainers": [
-    {
-      "name": "juliengabryelewicz",
-      "email": "",
-      "url": ""
-    }
-  ],
   "strapi": {
-    "packageManager": "npm",
-    "uuid": "e6cab7e4-bc38-41e9-a355-fda11a45056c"
+    "uuid": "a8e7de4b-e524-4a6e-8831-5a6279c3e1d3"
   },
   "engines": {
-    "node": ">= 10.0.0",
-    "npm": ">= 6.0.0"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }

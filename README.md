@@ -1,1 +1,3 @@
-# Back office of my personal website
+# Strapi application
+
+A quick description of your strapi application

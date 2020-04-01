@@ -2,23 +2,31 @@
   "connection": "default",
   "collectionName": "categories",
   "info": {
-    "name": "categorie",
-    "description": ""
+    "name": "categorie"
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "comment": ""
+    "timestamps": true
   },
   "attributes": {
     "titre": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": false
     },
     "slug": {
-      "unique": true,
+      "type": "string",
       "required": true,
-      "type": "string"
+      "unique": true
+    },
+    "contenu": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     },
     "seo_keywords": {
       "type": "string"
@@ -29,26 +37,20 @@
     "seo_description": {
       "type": "text"
     },
+    "visible": {
+      "type": "boolean"
+    },
     "articles": {
       "collection": "article",
-      "dominant": true,
       "via": "categories"
     },
-    "contenu": {
-      "type": "text"
-    },
-    "categories": {
-      "collection": "categorie",
-      "via": "category"
-    },
-    "category": {
-      "model": "categorie",
-      "via": "categories"
-    },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload"
+    "langage": {
+      "type": "enumeration",
+      "enum": [
+        "fr_FR",
+        "en_EN",
+        "de_DE"
+      ]
     }
   }
 }

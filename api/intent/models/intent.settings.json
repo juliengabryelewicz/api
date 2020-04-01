@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "intents",
+  "info": {
+    "name": "intent"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "utterances": {
+      "type": "text"
+    },
+    "reponses_positives": {
+      "type": "text"
+    },
+    "reponses_negatives": {
+      "type": "text"
+    },
+    "reponses_positives_plus": {
+      "type": "text"
+    },
+    "reponses_negatives_plus": {
+      "type": "text"
+    },
+    "entities": {
+      "collection": "entity"
+    },
+    "langage": {
+      "type": "enumeration",
+      "enum": [
+        "fr_FR",
+        "en_EN",
+        "de_DE"
+      ]
+    }
+  }
+}

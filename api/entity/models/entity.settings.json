@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "entities",
+  "info": {
+    "name": "entity"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "automatically_extensible": {
+      "type": "boolean"
+    },
+    "values": {
+      "type": "text"
+    }
+  }
+}

@@ -2,37 +2,28 @@
   "connection": "default",
   "collectionName": "articles",
   "info": {
-    "name": "article",
-    "description": ""
+    "name": "Article"
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "comment": ""
+    "timestamps": true
   },
   "attributes": {
     "titre": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "slug": {
+      "type": "string",
       "unique": true,
-      "required": true,
-      "type": "string"
-    },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload"
+      "required": true
     },
     "contenu": {
-      "type": "text"
+      "type": "richtext"
     },
     "visible": {
       "type": "boolean"
-    },
-    "seo_title": {
-      "type": "string"
     },
     "seo_keywords": {
       "type": "string"
@@ -40,12 +31,30 @@
     "seo_description": {
       "type": "text"
     },
-    "categories": {
-      "collection": "categorie",
-      "via": "articles"
-    },
     "resume": {
       "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "categories": {
+      "via": "articles",
+      "collection": "categorie",
+      "dominant": true
+    },
+    "langage": {
+      "type": "enumeration",
+      "enum": [
+        "fr_FR",
+        "en_EN",
+        "de_DE"
+      ]
     }
   }
 }

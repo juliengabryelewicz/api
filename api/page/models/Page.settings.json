@@ -2,23 +2,20 @@
   "connection": "default",
   "collectionName": "pages",
   "info": {
-    "name": "page",
-    "description": ""
+    "name": "page"
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "comment": ""
+    "timestamps": true
   },
   "attributes": {
     "titre": {
-      "required": true,
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
-      "unique": true,
-      "required": true,
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "contenu": {
       "type": "text"
@@ -26,7 +23,8 @@
     "image": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "seo_keywords": {
       "type": "string"
@@ -39,6 +37,14 @@
     },
     "visible": {
       "type": "boolean"
+    },
+    "langage": {
+      "type": "enumeration",
+      "enum": [
+        "fr_FR",
+        "en_EN",
+        "de_DE"
+      ]
     }
   }
 }

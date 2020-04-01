@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/categories",
-      "handler": "Categorie.find",
+      "handler": "categorie.find",
       "config": {
         "policies": []
       }
@@ -11,7 +11,7 @@
     {
       "method": "GET",
       "path": "/categories/count",
-      "handler": "Categorie.count",
+      "handler": "categorie.count",
       "config": {
         "policies": []
       }
@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/categories/:id",
-      "handler": "Categorie.findOne",
+      "handler": "categorie.findOne",
       "config": {
         "policies": []
       }
@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/categories",
-      "handler": "Categorie.create",
+      "handler": "categorie.create",
       "config": {
         "policies": []
       }
@@ -35,7 +35,7 @@
     {
       "method": "PUT",
       "path": "/categories/:id",
-      "handler": "Categorie.update",
+      "handler": "categorie.update",
       "config": {
         "policies": []
       }
@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/categories/:id",
-      "handler": "Categorie.destroy",
+      "handler": "categorie.delete",
       "config": {
         "policies": []
       }
